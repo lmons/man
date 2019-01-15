@@ -1,0 +1,4 @@
+<?php
+
+$feedModules = array (
+);

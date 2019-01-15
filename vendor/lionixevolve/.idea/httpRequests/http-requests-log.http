@@ -1,0 +1,12 @@
+GET http://scrm.thnln.com/vendor/lionixevolve/graphqlsuitecrm/rest.php/ping
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://scrm.thnln.com/vendor/lionixevolve/graphqlsuitecrm/rest.php/graphql
+Accept: */*
+Cache-Control: no-cache
+
+###
+

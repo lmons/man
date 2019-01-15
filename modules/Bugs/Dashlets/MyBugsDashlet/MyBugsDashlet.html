@@ -1,0 +1,75 @@
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>pivot() demo</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="modules/Bugs/Dashlets/MyBugsDashlet/jquery-1.11.0.js"></script>
+
+      <script type="text/javascript" src="modules/Bugs/Dashlets/MyBugsDashlet/jquery-ui.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="modules/Bugs/Dashlets/MyBugsDashlet/pivot.css">
+      <script type="text/javascript" src="modules/Bugs/Dashlets/MyBugsDashlet/pivot.js"></script>
+      <script type="text/javascript" src="modules/Bugs/Dashlets/MyBugsDashlet/pivot.data.js"></script>
+        <script type="text/javascript">
+
+
+   
+
+
+    $(function(){
+      
+var utils = $.pivotUtilities;
+var heatmap =  utils.renderers["Heatmap"];
+var sumOverSum =  utils.aggregators["Sum over Sum"];
+
+$("#output").pivot(
+  utils.tipsData, {
+    rows: ["sex", "smoker"],
+    cols: ["day", "time"],
+    renderer: heatmap
+  });
+
+
+    });
+
+
+</script>
+  <style id="compiled-css" type="text/css">
+      body {
+  font-family: Verdana;
+}
+
+  </style>
+
+</head>
+<body> 
+
+  <style id="compiled-css" type="text/css">
+      body {
+  font-family: Verdana;
+}
+
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+
+    <div id="output"></div>
+
+  
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: ""
+      }], "*")
+    }
+  </script>
+
+
+</body></html>
